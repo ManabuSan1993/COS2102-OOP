@@ -20,9 +20,13 @@ class Stack {
         }
         
         void push(string item){
-            top++;
-            stk[top] = item;
-            cout<<"Added ["<<item<<"] complete"<<endl;
+            if(top == (max-1)){
+                cout<<"No space"<<endl;
+            }else{
+                top++;
+                stk[top] = item;
+                cout<<"Added ["<<item<<"] complete"<<endl;
+            }
         }
         void pop(){
             if (top == -1) {
